@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Management System</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            padding: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Welcome to Library Management System</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Books</h3>
+                <a href="{% url 'add_book' %}" class="btn btn-primary mb-2">Add Book</a>
+                <a href="{% url 'book_list' %}" class="btn btn-secondary">View Books</a>
+            </div>
+            <div class="col-md-4">
+                <h3>Authors</h3>
+                <a href="{% url 'add_author' %}" class="btn btn-primary mb-2">Add Author</a>
+                <a href="{% url 'author_list' %}" class="btn btn-secondary">View Authors</a>
+            </div>
+            <div class="col-md-4">
+                <h3>Borrowers</h3>
+                <a href="{% url 'add_borrower' %}" class="btn btn-primary mb-2">Add Borrower</a>
+                <a href="{% url 'borrower_list' %}" class="btn btn-secondary">View Borrowers</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
